@@ -17,6 +17,8 @@
 		FD2DAD422815AE4E0001F576 /* ImageSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2DAD412815AE4E0001F576 /* ImageSelectorController.swift */; };
 		FD2DAD442815AE580001F576 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2DAD432815AE580001F576 /* NotificationController.swift */; };
 		FD2DAD462815AE620001F576 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2DAD452815AE620001F576 /* ProfileController.swift */; };
+		FD2DAD482815BD7F0001F576 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2DAD472815BD7F0001F576 /* FeedCell.swift */; };
+		FD2DAD4C2815BE580001F576 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2DAD4B2815BE580001F576 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		FD2DAD412815AE4E0001F576 /* ImageSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectorController.swift; sourceTree = "<group>"; };
 		FD2DAD432815AE580001F576 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		FD2DAD452815AE620001F576 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		FD2DAD472815BD7F0001F576 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		FD2DAD4B2815BE580001F576 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +68,12 @@
 		FD2DAD1C2815A7D20001F576 /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
-				FD2DAD392815A8690001F576 /* Utils */,
 				FD2DAD382815A8670001F576 /* API */,
 				FD2DAD372815A8660001F576 /* Controller */,
 				FD2DAD362815A8640001F576 /* ViewModel */,
 				FD2DAD352815A8630001F576 /* View */,
 				FD2DAD312815A8410001F576 /* Model */,
+				FD2DAD392815A8690001F576 /* Utils */,
 				FD2DAD1D2815A7D20001F576 /* AppDelegate.swift */,
 				FD2DAD1F2815A7D20001F576 /* SceneDelegate.swift */,
 				FD2DAD262815A7D60001F576 /* Assets.xcassets */,
@@ -89,6 +93,7 @@
 		FD2DAD352815A8630001F576 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FD2DAD472815BD7F0001F576 /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 		FD2DAD392815A8690001F576 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FD2DAD4B2815BE580001F576 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -202,9 +208,11 @@
 				FD2DAD3C2815A9450001F576 /* MainTabController.swift in Sources */,
 				FD2DAD442815AE580001F576 /* NotificationController.swift in Sources */,
 				FD2DAD202815A7D20001F576 /* SceneDelegate.swift in Sources */,
+				FD2DAD4C2815BE580001F576 /* Extensions.swift in Sources */,
 				FD2DAD422815AE4E0001F576 /* ImageSelectorController.swift in Sources */,
 				FD2DAD3E2815AE300001F576 /* FeedController.swift in Sources */,
 				FD2DAD462815AE620001F576 /* ProfileController.swift in Sources */,
+				FD2DAD482815BD7F0001F576 /* FeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
