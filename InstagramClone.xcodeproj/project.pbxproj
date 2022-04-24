@@ -56,6 +56,12 @@
 		FD2DAD1C2815A7D20001F576 /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				FD2DAD392815A8690001F576 /* Utils */,
+				FD2DAD382815A8670001F576 /* API */,
+				FD2DAD372815A8660001F576 /* Controller */,
+				FD2DAD362815A8640001F576 /* ViewModel */,
+				FD2DAD352815A8630001F576 /* View */,
+				FD2DAD312815A8410001F576 /* Model */,
 				FD2DAD1D2815A7D20001F576 /* AppDelegate.swift */,
 				FD2DAD1F2815A7D20001F576 /* SceneDelegate.swift */,
 				FD2DAD212815A7D20001F576 /* ViewController.swift */,
@@ -65,6 +71,48 @@
 				FD2DAD2B2815A7D60001F576 /* Info.plist */,
 			);
 			path = InstagramClone;
+			sourceTree = "<group>";
+		};
+		FD2DAD312815A8410001F576 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FD2DAD352815A8630001F576 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FD2DAD362815A8640001F576 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FD2DAD372815A8660001F576 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FD2DAD382815A8670001F576 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FD2DAD392815A8690001F576 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
