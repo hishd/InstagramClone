@@ -12,6 +12,11 @@
 		FD2DAD272815A7D60001F576 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD2DAD262815A7D60001F576 /* Assets.xcassets */; };
 		FD2DAD2A2815A7D60001F576 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2DAD282815A7D60001F576 /* LaunchScreen.storyboard */; };
 		FD2DAD3C2815A9450001F576 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2DAD3B2815A9450001F576 /* MainTabController.swift */; };
+		FD2DAD3E2815AE300001F576 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2DAD3D2815AE300001F576 /* FeedController.swift */; };
+		FD2DAD402815AE390001F576 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2DAD3F2815AE390001F576 /* SearchController.swift */; };
+		FD2DAD422815AE4E0001F576 /* ImageSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2DAD412815AE4E0001F576 /* ImageSelectorController.swift */; };
+		FD2DAD442815AE580001F576 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2DAD432815AE580001F576 /* NotificationController.swift */; };
+		FD2DAD462815AE620001F576 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2DAD452815AE620001F576 /* ProfileController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		FD2DAD292815A7D60001F576 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD2DAD2B2815A7D60001F576 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD2DAD3B2815A9450001F576 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		FD2DAD3D2815AE300001F576 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		FD2DAD3F2815AE390001F576 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		FD2DAD412815AE4E0001F576 /* ImageSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectorController.swift; sourceTree = "<group>"; };
+		FD2DAD432815AE580001F576 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		FD2DAD452815AE620001F576 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +104,11 @@
 			isa = PBXGroup;
 			children = (
 				FD2DAD3B2815A9450001F576 /* MainTabController.swift */,
+				FD2DAD3D2815AE300001F576 /* FeedController.swift */,
+				FD2DAD3F2815AE390001F576 /* SearchController.swift */,
+				FD2DAD412815AE4E0001F576 /* ImageSelectorController.swift */,
+				FD2DAD432815AE580001F576 /* NotificationController.swift */,
+				FD2DAD452815AE620001F576 /* ProfileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -183,8 +198,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD2DAD1E2815A7D20001F576 /* AppDelegate.swift in Sources */,
+				FD2DAD402815AE390001F576 /* SearchController.swift in Sources */,
 				FD2DAD3C2815A9450001F576 /* MainTabController.swift in Sources */,
+				FD2DAD442815AE580001F576 /* NotificationController.swift in Sources */,
 				FD2DAD202815A7D20001F576 /* SceneDelegate.swift in Sources */,
+				FD2DAD422815AE4E0001F576 /* ImageSelectorController.swift in Sources */,
+				FD2DAD3E2815AE300001F576 /* FeedController.swift in Sources */,
+				FD2DAD462815AE620001F576 /* ProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
