@@ -40,6 +40,6 @@ extension FeedController {
 // MARK: Setting the size of the Collection View Cells
 extension FeedController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.height, height: 200)
+        return CGSize(width: view.frame.width, height: 200)
     }
 }
