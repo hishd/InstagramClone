@@ -11,6 +11,18 @@ class MainTabController: UITabBarController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        configureVC()
+    }
+    
+    // MARK: Helpers
+    
+    func configureVC() {
+        let feedVc = FeedController()
+        let searchVc = SearchController()
+        let imageSelectorVc = ImageSelectorController()
+        let notificationVc = NotificationController()
+        let profileVc = ProfileController()
+        
+        viewControllers = [feedVc, searchVc, imageSelectorVc, notificationVc, profileVc]
     }
 }

@@ -8,8 +8,9 @@
 import Foundation
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemCyan
     }
 }
