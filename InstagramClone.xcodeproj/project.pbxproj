@@ -21,6 +21,8 @@
 		FD2DAD4C2815BE580001F576 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2DAD4B2815BE580001F576 /* Extensions.swift */; };
 		FD58857928185D4300B8A32C /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58857828185D4300B8A32C /* LoginController.swift */; };
 		FD58857B28185D5100B8A32C /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58857A28185D5100B8A32C /* RegistrationController.swift */; };
+		FD58857D28185E3700B8A32C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58857C28185E3700B8A32C /* BaseViewController.swift */; };
+		FD58857F28186D9300B8A32C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58857E28186D9300B8A32C /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		FD2DAD4B2815BE580001F576 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FD58857828185D4300B8A32C /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		FD58857A28185D5100B8A32C /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		FD58857C28185E3700B8A32C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FD58857E28186D9300B8A32C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				FD2DAD472815BD7F0001F576 /* FeedCell.swift */,
+				FD58857E28186D9300B8A32C /* CustomTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 		FD2DAD372815A8660001F576 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FD58857C28185E3700B8A32C /* BaseViewController.swift */,
 				FD58857728185D3200B8A32C /* Authentication */,
 				FD2DAD3B2815A9450001F576 /* MainTabController.swift */,
 				FD2DAD3D2815AE300001F576 /* FeedController.swift */,
@@ -217,6 +223,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD58857F28186D9300B8A32C /* CustomTextField.swift in Sources */,
+				FD58857D28185E3700B8A32C /* BaseViewController.swift in Sources */,
 				FD58857928185D4300B8A32C /* LoginController.swift in Sources */,
 				FD2DAD1E2815A7D20001F576 /* AppDelegate.swift in Sources */,
 				FD2DAD402815AE390001F576 /* SearchController.swift in Sources */,

@@ -24,11 +24,11 @@ extension UIViewController {
 }
 
 extension UIButton {
-    func attributedTitle(first: String, second: String) {
-        let attrs : [NSAttributedString.Key: Any] = [.foregroundColor : UIColor(white: 1, alpha: 0.87), .font: UIFont.systemFont(ofSize: 16)]
+    func attributedTitle(first: String, second: String, fontSize: CGFloat) {
+        let attrs : [NSAttributedString.Key: Any] = [.foregroundColor : UIColor(white: 1, alpha: 0.87), .font: UIFont.systemFont(ofSize: fontSize)]
         let attributedTitle = NSMutableAttributedString(string: "\(first) ", attributes: attrs)
         
-        let boldAttrs: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.87), .font: UIFont.boldSystemFont(ofSize: 16)]
+        let boldAttrs: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.87), .font: UIFont.boldSystemFont(ofSize: fontSize)]
         
         attributedTitle.append(NSAttributedString(string: second, attributes: boldAttrs))
         
@@ -59,11 +59,11 @@ extension UIView {
         }
         
         if let bottom = bottom {
-            bottomAnchor.constraint(equalTo: bottom, constant: paddingBottom).isActive = true
+            bottomAnchor.constraint(equalTo: bottom, constant: -paddingBottom).isActive = true
         }
         
         if let right = right {
-            rightAnchor.constraint(equalTo: right, constant: paddingRight).isActive = true
+            rightAnchor.constraint(equalTo: right, constant: -paddingRight).isActive = true
         }
         
         if let width = width {

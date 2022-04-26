@@ -9,9 +9,13 @@ import Foundation
 import UIKit
 
 
-class RegistrationController: UIViewController {
+class RegistrationController: UIViewController, BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .purple
+        configureUI()
+    }
+    
+    func configureUI() {
+        
     }
 }
