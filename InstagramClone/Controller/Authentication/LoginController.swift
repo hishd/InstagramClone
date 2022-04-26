@@ -29,7 +29,7 @@ class LoginController: UIViewController, BaseViewController {
         return textField
     }()
     
-    private let loginButton: UIButton = {
+    private lazy var loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Log In", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -40,14 +40,14 @@ class LoginController: UIViewController, BaseViewController {
         return button
     }()
     
-    private let dontHaveAccountButton: UIButton = {
+    private lazy var dontHaveAccountButton: UIButton = {
         let button = UIButton(type: .system)
         button.attributedTitle(first: "Don't have an account? ", second: "Sign Up", fontSize: 16)
-        
+        button.addTarget(self, action: #selector(showSignUp), for: .touchUpInside)
         return button
     }()
     
-    private let forgotPasswordButton: UIButton = {
+    private lazy var forgotPasswordButton: UIButton = {
         let button = UIButton(type: .system)
         button.attributedTitle(first: "Forgot your password? ", second: "Get help signing in.", fontSize: 14)
         return button
@@ -63,11 +63,7 @@ class LoginController: UIViewController, BaseViewController {
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
         
-        let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.systemPurple.cgColor, UIColor.systemBlue.cgColor]
-        gradient.locations = [0,1]
-        view.layer.addSublayer(gradient)
-        gradient.frame = view.frame
+        self.configureGradientLayer()
         
         view.addSubview(logo)
         logo.setDimensions(height: 80, width: 120)
@@ -86,5 +82,11 @@ class LoginController: UIViewController, BaseViewController {
         
         view.addSubview(forgotPasswordButton)
         forgotPasswordButton.centerX(inView: view, topAnchor: stackView.bottomAnchor, paddingTop: 20)
+    }
+
+    // MARK: Actions
+    
+    @objc func showSignUp() {
+        self.navigationController?.pushViewController(RegistrationController(), animated: true)
     }
 }
