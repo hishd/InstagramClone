@@ -19,6 +19,8 @@
 		FD2DAD462815AE620001F576 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2DAD452815AE620001F576 /* ProfileController.swift */; };
 		FD2DAD482815BD7F0001F576 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2DAD472815BD7F0001F576 /* FeedCell.swift */; };
 		FD2DAD4C2815BE580001F576 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2DAD4B2815BE580001F576 /* Extensions.swift */; };
+		FD58857928185D4300B8A32C /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58857828185D4300B8A32C /* LoginController.swift */; };
+		FD58857B28185D5100B8A32C /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58857A28185D5100B8A32C /* RegistrationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		FD2DAD452815AE620001F576 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		FD2DAD472815BD7F0001F576 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		FD2DAD4B2815BE580001F576 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FD58857828185D4300B8A32C /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		FD58857A28185D5100B8A32C /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 		FD2DAD372815A8660001F576 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FD58857728185D3200B8A32C /* Authentication */,
 				FD2DAD3B2815A9450001F576 /* MainTabController.swift */,
 				FD2DAD3D2815AE300001F576 /* FeedController.swift */,
 				FD2DAD3F2815AE390001F576 /* SearchController.swift */,
@@ -131,6 +136,15 @@
 				FD2DAD4B2815BE580001F576 /* Extensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		FD58857728185D3200B8A32C /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				FD58857828185D4300B8A32C /* LoginController.swift */,
+				FD58857A28185D5100B8A32C /* RegistrationController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD58857928185D4300B8A32C /* LoginController.swift in Sources */,
 				FD2DAD1E2815A7D20001F576 /* AppDelegate.swift in Sources */,
 				FD2DAD402815AE390001F576 /* SearchController.swift in Sources */,
 				FD2DAD3C2815A9450001F576 /* MainTabController.swift in Sources */,
@@ -212,6 +227,7 @@
 				FD2DAD422815AE4E0001F576 /* ImageSelectorController.swift in Sources */,
 				FD2DAD3E2815AE300001F576 /* FeedController.swift in Sources */,
 				FD2DAD462815AE620001F576 /* ProfileController.swift in Sources */,
+				FD58857B28185D5100B8A32C /* RegistrationController.swift in Sources */,
 				FD2DAD482815BD7F0001F576 /* FeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
