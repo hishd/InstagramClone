@@ -7,8 +7,12 @@
 
 import Foundation
 import UIKit
+import Combine
 
 class LoginController: UIViewController, BaseViewController {
+    
+    private var viewModel: LoginViewModel = LoginViewModel()
+    private var cancellables: Set<AnyCancellable> = []
     
     private let logo: UIImageView = {
         let image = UIImageView()
@@ -33,10 +37,11 @@ class LoginController: UIViewController, BaseViewController {
         let button = UIButton(type: .system)
         button.setTitle("Log In", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1).withAlphaComponent(0.5)
         button.layer.cornerRadius = 5
         button.setHeight(of: 50)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        button.isEnabled = false
         return button
     }()
     
@@ -56,6 +61,8 @@ class LoginController: UIViewController, BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        configureNotificationObservers()
+        setupBindings()
     }
     
     func configureUI() {
@@ -88,5 +95,33 @@ class LoginController: UIViewController, BaseViewController {
     
     @objc func showSignUp() {
         self.navigationController?.pushViewController(RegistrationController(), animated: true)
+    }
+    
+    @objc func textDidChange(sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        }
+        
+        if sender == passwordTextField {
+            viewModel.password = sender.text
+        }
+    }
+    
+    // MARK: Helper Methods
+    
+    func setupBindings() {
+        viewModel.$formIsValid.sink { [weak self] isValid in
+            self?.loginButton.isEnabled = isValid
+            if isValid {
+                self?.loginButton.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
+            } else {
+                self?.loginButton.backgroundColor =  #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1).withAlphaComponent(0.5)
+            }
+        }.store(in: &cancellables)
+    }
+    
+    func configureNotificationObservers() {
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
 }

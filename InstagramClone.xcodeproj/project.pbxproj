@@ -23,6 +23,7 @@
 		FD58857B28185D5100B8A32C /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58857A28185D5100B8A32C /* RegistrationController.swift */; };
 		FD58857D28185E3700B8A32C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58857C28185E3700B8A32C /* BaseViewController.swift */; };
 		FD58857F28186D9300B8A32C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58857E28186D9300B8A32C /* CustomTextField.swift */; };
+		FD9A419B282AA29D003CB662 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A419A282AA29D003CB662 /* AuthenticationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		FD58857A28185D5100B8A32C /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		FD58857C28185E3700B8A32C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FD58857E28186D9300B8A32C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		FD9A419A282AA29D003CB662 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		FD2DAD362815A8640001F576 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FD9A419A282AA29D003CB662 /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -117,8 +120,8 @@
 		FD2DAD372815A8660001F576 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FD58857C28185E3700B8A32C /* BaseViewController.swift */,
 				FD58857728185D3200B8A32C /* Authentication */,
+				FD58857C28185E3700B8A32C /* BaseViewController.swift */,
 				FD2DAD3B2815A9450001F576 /* MainTabController.swift */,
 				FD2DAD3D2815AE300001F576 /* FeedController.swift */,
 				FD2DAD3F2815AE390001F576 /* SearchController.swift */,
@@ -229,6 +232,7 @@
 				FD2DAD1E2815A7D20001F576 /* AppDelegate.swift in Sources */,
 				FD2DAD402815AE390001F576 /* SearchController.swift in Sources */,
 				FD2DAD3C2815A9450001F576 /* MainTabController.swift in Sources */,
+				FD9A419B282AA29D003CB662 /* AuthenticationViewModel.swift in Sources */,
 				FD2DAD442815AE580001F576 /* NotificationController.swift in Sources */,
 				FD2DAD202815A7D20001F576 /* SceneDelegate.swift in Sources */,
 				FD2DAD4C2815BE580001F576 /* Extensions.swift in Sources */,
