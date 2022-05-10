@@ -24,6 +24,7 @@
 		FD58857D28185E3700B8A32C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58857C28185E3700B8A32C /* BaseViewController.swift */; };
 		FD58857F28186D9300B8A32C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD58857E28186D9300B8A32C /* CustomTextField.swift */; };
 		FD9A419B282AA29D003CB662 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A419A282AA29D003CB662 /* AuthenticationViewModel.swift */; };
+		FD9A419D282AD7DD003CB662 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A419C282AD7DD003CB662 /* FieldValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		FD58857C28185E3700B8A32C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FD58857E28186D9300B8A32C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		FD9A419A282AA29D003CB662 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		FD9A419C282AD7DD003CB662 /* FieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				FD2DAD4B2815BE580001F576 /* Extensions.swift */,
+				FD9A419C282AD7DD003CB662 /* FieldValidator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				FD9A419B282AA29D003CB662 /* AuthenticationViewModel.swift in Sources */,
 				FD2DAD442815AE580001F576 /* NotificationController.swift in Sources */,
 				FD2DAD202815A7D20001F576 /* SceneDelegate.swift in Sources */,
+				FD9A419D282AD7DD003CB662 /* FieldValidator.swift in Sources */,
 				FD2DAD4C2815BE580001F576 /* Extensions.swift in Sources */,
 				FD2DAD422815AE4E0001F576 /* ImageSelectorController.swift in Sources */,
 				FD2DAD3E2815AE300001F576 /* FeedController.swift in Sources */,
