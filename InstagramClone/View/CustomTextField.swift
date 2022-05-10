@@ -24,6 +24,7 @@ class CustomTextField: UITextField {
         backgroundColor = UIColor(white: 1, alpha: 0.1)
         setHeight(of: 50)
         attributedPlaceholder = NSAttributedString(string: placeHolder, attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
+        inputAccessoryView = setupToolbar()
     }
     
     required init?(coder: NSCoder) {

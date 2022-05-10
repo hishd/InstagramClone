@@ -7,6 +7,22 @@
 
 import UIKit
 
+extension UIView {
+    func setupToolbar() -> UIToolbar {
+        let toolbar = UIToolbar()
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonTapped))
+        
+        toolbar.setItems([flexSpace, doneButton], animated: true)
+        toolbar.sizeToFit()
+        return toolbar
+    }
+    
+    @objc func doneButtonTapped() {
+        endEditing(true)
+    }
+}
+
 extension UIViewController {
     func configureGradientLayer() {
         let gradient = CAGradientLayer()
