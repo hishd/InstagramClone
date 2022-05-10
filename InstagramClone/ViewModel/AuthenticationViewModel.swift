@@ -23,7 +23,10 @@ class LoginViewModel {
     @Published var formIsValid: Bool = false
     
     private func validateForm() {
-        self.formIsValid = (email?.isEmpty == false && password?.isEmpty == false)
+        self.formIsValid = (
+            FieldValidator.shared.isValidEmailAddress(of: email ?? "") &&
+            FieldValidator.shared.isValidPassword(of: password ?? "")
+        )
     }
 }
 
