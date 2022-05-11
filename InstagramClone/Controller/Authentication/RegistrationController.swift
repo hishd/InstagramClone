@@ -7,9 +7,12 @@
 
 import Foundation
 import UIKit
-
+import Combine
 
 class RegistrationController: UIViewController, BaseViewController {
+    
+    private var viewModel = RegistrationViewModel()
+    private var cancllables: Set<AnyCancellable> = []
     
     private let addImageButton: UIButton = {
         let button = UIButton(type: .system)
@@ -19,7 +22,7 @@ class RegistrationController: UIViewController, BaseViewController {
     }()
     
     private let emailTextField: UITextField = {
-        let textField = CustomTextField(placeHolder: "Email")
+        let textField = CustomTextField(placeHolder: "Email Address")
         textField.keyboardType = .emailAddress
         return textField
     }()
@@ -38,7 +41,7 @@ class RegistrationController: UIViewController, BaseViewController {
         let button = UIButton(type: .system)
         button.setTitle("Sign Up", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
+        button.backgroundColor =  #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1).withAlphaComponent(0.5)
         button.layer.cornerRadius = 5
         button.setHeight(of: 50)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
@@ -55,6 +58,8 @@ class RegistrationController: UIViewController, BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        setupBindings()
+        configureNotificationObservers()
     }
     
     func configureUI() {
@@ -81,5 +86,49 @@ class RegistrationController: UIViewController, BaseViewController {
     
     @objc func popToLogin() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func textDidChange(sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        }
+        if sender == passwordTextField {
+            viewModel.password = sender.text
+        }
+        if sender == fullNameTextField {
+            viewModel.fullName = sender.text
+        }
+        if sender == userNameTextField {
+            viewModel.userName = sender.text
+        }
+    }
+    
+    // MARK: Helper Methods
+    
+    func setupBindings() {
+        viewModel.$formIsValid
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] isValid in
+                self?.signUpButton.isEnabled = isValid
+            }.store(in: &cancllables)
+        
+        viewModel.$signInButtonColor
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] color in
+                self?.signUpButton.backgroundColor = color
+            }.store(in: &cancllables)
+        
+        viewModel.$signInButtonTitleColor
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] color in
+                self?.signUpButton.setTitleColor(color, for: .normal)
+            }.store(in: &cancllables)
+    }
+    
+    func configureNotificationObservers() {
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        fullNameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        userNameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
 }

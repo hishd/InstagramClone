@@ -11,10 +11,10 @@ class FieldValidator {
     static let shared = FieldValidator()
     private init() {}
     
-    lazy var emailPredicate = NSPredicate(format: "SELF MATCHES %@", Patterns.emailRegex.rawValue)
-    lazy var passwordPredicate = NSPredicate(format: "SELF MATCHES %@", Patterns.passwordRegex.rawValue)
-    lazy var namePredicate = NSPredicate(format: "SELF MATCHES %@", Patterns.nameRegex.rawValue)
-    lazy var userNamePredicate = NSPredicate(format: "SELF MATCHES %@", Patterns.userNameRegex.rawValue)
+    lazy private var emailPredicate = NSPredicate(format: "SELF MATCHES %@", Patterns.emailRegex.rawValue)
+    lazy private var passwordPredicate = NSPredicate(format: "SELF MATCHES %@", Patterns.passwordRegex.rawValue)
+    lazy private var namePredicate = NSPredicate(format: "SELF MATCHES %@", Patterns.nameRegex.rawValue)
+    lazy private var userNamePredicate = NSPredicate(format: "SELF MATCHES %@", Patterns.userNameRegex.rawValue)
     
     func isValidEmailAddress(of email: String) -> Bool {
         return self.emailPredicate.evaluate(with: email)
