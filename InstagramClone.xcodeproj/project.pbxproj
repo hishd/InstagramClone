@@ -80,6 +80,7 @@
 		FD2DAD1C2815A7D20001F576 /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				FD3FC8BF282C30A900312763 /* Interfaces */,
 				FD2DAD382815A8670001F576 /* API */,
 				FD2DAD372815A8660001F576 /* Controller */,
 				FD2DAD362815A8640001F576 /* ViewModel */,
@@ -148,6 +149,13 @@
 				FD9A419C282AD7DD003CB662 /* FieldValidator.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		FD3FC8BF282C30A900312763 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interfaces;
 			sourceTree = "<group>";
 		};
 		FD58857728185D3200B8A32C /* Authentication */ = {

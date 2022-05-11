@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-class LoginViewModel {
+class LoginViewModel: Validatable {
     var email: String? {
         didSet {
             validateForm()
@@ -25,7 +25,7 @@ class LoginViewModel {
     @Published var loginButtonTitleColor: UIColor = UIColor(white: 1, alpha: 0.67)
     @Published var formIsValid: Bool = false
     
-    private func validateForm() {
+    func validateForm() {
         if FieldValidator.shared.isValidEmailAddress(of: email ?? "") &&
             FieldValidator.shared.isValidPassword(of: password ?? "") {
             self.loginButtonColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
@@ -39,6 +39,38 @@ class LoginViewModel {
     }
 }
 
-class RegistrationViewModel {
+class RegistrationViewModel: Validatable {
+    @Published var formIsValid: Bool  = false
+    @Published var signInButtonColor: UIColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1).withAlphaComponent(0.5)
+    @Published var signInButtonTitleColor: UIColor = UIColor(white: 1, alpha: 0.67)
     
+    var email: String? {
+        didSet {
+            validateForm()
+        }
+    }
+    var password: String? {
+        didSet {
+            validateForm()
+        }
+    }
+    var fullName: String? {
+        didSet {
+            validateForm()
+        }
+    }
+    var userName: String? {
+        didSet {
+            validateForm()
+        }
+    }
+    
+    func validateForm() {
+        
+    }
+}
+
+protocol Validatable {
+    var formIsValid: Bool {get}
+    func validateForm()
 }
