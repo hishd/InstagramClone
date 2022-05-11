@@ -14,10 +14,11 @@ class RegistrationController: UIViewController, BaseViewController {
     private var viewModel = RegistrationViewModel()
     private var cancllables: Set<AnyCancellable> = []
     
-    private let addImageButton: UIButton = {
+    private lazy var addImageButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "plus_photo"), for: .normal)
         button.tintColor = .white
+        button.addTarget(self, action: #selector(handleSelectPhoto), for: .touchUpInside)
         return button
     }()
     
@@ -100,6 +101,13 @@ class RegistrationController: UIViewController, BaseViewController {
         }
     }
     
+    @objc func handleSelectPhoto() {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        present(picker, animated: true, completion: nil)
+    }
+    
     // MARK: Helper Methods
     
     func setupBindings() {
@@ -127,5 +135,23 @@ class RegistrationController: UIViewController, BaseViewController {
         passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         fullNameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         userNameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+    }
+}
+
+// MARK: UIImagePicker Delegates
+
+extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.editedImage] as? UIImage else {
+            return
+        }
+        
+        addImageButton.layer.cornerRadius = addImageButton.frame.width/2
+        addImageButton.layer.masksToBounds = true
+        addImageButton.layer.borderColor = UIColor.white.cgColor
+        addImageButton.layer.borderWidth = 1
+        addImageButton.setImage(image.withRenderingMode(.alwaysOriginal), for: .normal)
+        
+        self.dismiss(animated: true)
     }
 }
