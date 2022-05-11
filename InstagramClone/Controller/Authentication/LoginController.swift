@@ -117,6 +117,10 @@ class LoginController: UIViewController, BaseViewController {
         viewModel.$loginButtonColor.sink { [weak self] color in
             self?.loginButton.backgroundColor = color
         }.store(in: &cancellables)
+        
+        viewModel.$loginButtonTitleColor.sink { [weak self] color in
+            self?.loginButton.setTitleColor(color, for: .normal)
+        }.store(in: &cancellables)
     }
     
     func configureNotificationObservers() {
