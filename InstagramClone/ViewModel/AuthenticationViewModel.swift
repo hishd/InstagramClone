@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 class LoginViewModel {
@@ -20,13 +21,18 @@ class LoginViewModel {
         }
     }
     
+    @Published var loginButtonColor: UIColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1).withAlphaComponent(0.5)
     @Published var formIsValid: Bool = false
     
     private func validateForm() {
-        self.formIsValid = (
-            FieldValidator.shared.isValidEmailAddress(of: email ?? "") &&
-            FieldValidator.shared.isValidPassword(of: password ?? "")
-        )
+        if FieldValidator.shared.isValidEmailAddress(of: email ?? "") &&
+            FieldValidator.shared.isValidPassword(of: password ?? "") {
+            self.loginButtonColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
+            self.formIsValid = true
+        } else {
+            self.loginButtonColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1).withAlphaComponent(0.5)
+            self.formIsValid = false
+        }
     }
 }
 

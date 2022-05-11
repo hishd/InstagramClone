@@ -112,11 +112,10 @@ class LoginController: UIViewController, BaseViewController {
     func setupBindings() {
         viewModel.$formIsValid.sink { [weak self] isValid in
             self?.loginButton.isEnabled = isValid
-            if isValid {
-                self?.loginButton.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
-            } else {
-                self?.loginButton.backgroundColor =  #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1).withAlphaComponent(0.5)
-            }
+        }.store(in: &cancellables)
+        
+        viewModel.$loginButtonColor.sink { [weak self] color in
+            self?.loginButton.backgroundColor = color
         }.store(in: &cancellables)
     }
     
