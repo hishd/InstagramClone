@@ -69,8 +69,3 @@ class RegistrationViewModel: Validatable {
         
     }
 }
-
-protocol Validatable {
-    var formIsValid: Bool {get}
-    func validateForm()
-}
