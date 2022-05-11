@@ -100,9 +100,7 @@ class LoginController: UIViewController, BaseViewController {
     @objc func textDidChange(sender: UITextField) {
         if sender == emailTextField {
             viewModel.email = sender.text
-        }
-        
-        if sender == passwordTextField {
+        } else if sender == passwordTextField {
             viewModel.password = sender.text
         }
     }

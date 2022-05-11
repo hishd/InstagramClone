@@ -91,14 +91,11 @@ class RegistrationController: UIViewController, BaseViewController {
     @objc func textDidChange(sender: UITextField) {
         if sender == emailTextField {
             viewModel.email = sender.text
-        }
-        if sender == passwordTextField {
+        } else if sender == passwordTextField {
             viewModel.password = sender.text
-        }
-        if sender == fullNameTextField {
+        } else if sender == fullNameTextField {
             viewModel.fullName = sender.text
-        }
-        if sender == userNameTextField {
+        } else if sender == userNameTextField {
             viewModel.userName = sender.text
         }
     }
