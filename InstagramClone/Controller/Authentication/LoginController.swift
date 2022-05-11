@@ -110,15 +110,21 @@ class LoginController: UIViewController, BaseViewController {
     // MARK: Helper Methods
     
     func setupBindings() {
-        viewModel.$formIsValid.sink { [weak self] isValid in
+        viewModel.$formIsValid
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] isValid in
             self?.loginButton.isEnabled = isValid
         }.store(in: &cancellables)
         
-        viewModel.$loginButtonColor.sink { [weak self] color in
+        viewModel.$loginButtonColor
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] color in
             self?.loginButton.backgroundColor = color
         }.store(in: &cancellables)
         
-        viewModel.$loginButtonTitleColor.sink { [weak self] color in
+        viewModel.$loginButtonTitleColor
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] color in
             self?.loginButton.setTitleColor(color, for: .normal)
         }.store(in: &cancellables)
     }
